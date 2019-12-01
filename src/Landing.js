@@ -1,7 +1,4 @@
 import React from 'react';
+import Calendar from "./components/CalendarComponent/Calendar/Calendar";
 
-function Landing(props) {
-    return <h1>Hello, {props.name}</h1>;
-}
-
-export default Landing;
+export default Calendar;
