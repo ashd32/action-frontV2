@@ -8,6 +8,7 @@ import './App.css';
 import Landing from "./Landing";
 import Home from "./Home";
 import Calendar from "./components/CalendarComponent/Calendar/Calendar";
+import HelpDesk from "./components/HelpDesk/HelpDesk";
 
 function App() {
   return (
@@ -41,12 +42,21 @@ function App() {
                       Calendar
                     </NavText>
                   </NavItem>
+                    <NavItem eventKey="helpdesk">
+                        <NavIcon>
+                            <i className="fa fa-fw fa-computer" style={{ fontSize: '1.75em' }} />
+                        </NavIcon>
+                        <NavText>
+                            Help Desk
+                        </NavText>
+                    </NavItem>
                 </SideNav.Nav>
               </SideNav>
               <main>
                 <Route path="/" exact component={props => <Landing />} />
                 <Route path="/home" component={props => <Home />} />
                 <Route path="/calendar" component={props => <Calendar />} />
+                <Route path="/helpdesk" component={props => <HelpDesk />} />
               </main>
             </React.Fragment>
         )}
