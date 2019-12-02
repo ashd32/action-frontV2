@@ -9,6 +9,7 @@ import Landing from "./Landing";
 import Home from "./Home";
 import Calendar from "./components/CalendarComponent/Calendar/Calendar";
 import HelpDesk from "./components/HelpDesk/HelpDesk";
+import APIDock from "./components/APIDock/APIDock";
 
 function App() {
   return (
@@ -50,6 +51,14 @@ function App() {
                             Help Desk
                         </NavText>
                     </NavItem>
+                    <NavItem eventKey="apidock">
+                        <NavIcon>
+                            <i className="fa fa-fw fa-computer" style={{ fontSize: '1.75em' }} />
+                        </NavIcon>
+                        <NavText>
+                            Dashboard
+                        </NavText>
+                    </NavItem>
                 </SideNav.Nav>
               </SideNav>
               <main>
@@ -57,6 +66,7 @@ function App() {
                 <Route path="/home" component={props => <Home />} />
                 <Route path="/calendar" component={props => <Calendar />} />
                 <Route path="/helpdesk" component={props => <HelpDesk />} />
+                <Route path="/dashboard" component={props => <APIDock />} />
               </main>
             </React.Fragment>
         )}
